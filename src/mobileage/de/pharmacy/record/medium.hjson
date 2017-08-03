@@ -1,0 +1,36 @@
+{
+  template:
+    '''
+<article class='ma-schema--pharmacy' itemscope itemtype='http://schema.org/Pharmacy'> 
+	<h1 itemprop='name'><%name%></h1>
+	<div class='ma - schema__logo'>
+		<img itemprop='logo' alt='Logo: <%name%>' src='<%logo%>'/>
+	</div>
+	<p itemprop='description'><%description%></p>
+	<dl>
+		<dt>Öffnungszeiten</dt>
+		<dd itemprop='openingHours'><%openingHours%></dd>
+		<dt>Telefon</dt>
+		<dd itemprop='telephone'><%telephone%></dd>
+		<dt>Fax</dt>
+		<dd itemprop='faxNumber'><%faxNumber%></dd>
+		<dt>E - Mail</dt>
+		<dd itemprop='email'><%email%></dd>
+		<dt>Web</dt>
+		<dd itemprop='url'><a href='<%url%>'><%url%></a></dd>
+		<dt>Adresse</dt>
+		<dd>
+			<address itemprop='address' itemscope itemtype='http://schema.org/PostalAddress'>
+				<%address.streetAddress%><br/>
+				<%address.addressCountry%> - <%address.postalCode%> <%address.addressLocality%>
+			</address>
+		</dd>
+	</dl>
+	<p>
+		<a href='https://maps.google.de/maps?ll=<%geo.latitude%>, <%geo.longitude%>&z=15&t=m&q=<%geo.latitude%>, <%geo.longitude%>'>Auf Karte zeigen</a>
+	</p>
+</article>
+    '''
+  onData: ""
+  onTemplate: ""
+}

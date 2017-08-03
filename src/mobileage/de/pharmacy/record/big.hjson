@@ -1,0 +1,61 @@
+{
+  template:
+    '''
+<article class='ma-schema--pharmacy' itemscope itemtype='http://schema.org/Pharmacy'> 
+	<h1 itemprop='name'><%name%></h1>
+	<div class='ma - schema__logo'>
+		<img itemprop='logo' alt='Logo: <%name%>' src='<%logo%>'/>
+	</div>
+	<p itemprop='description'><%description%></p>
+	<dl>
+		<dt>Öffnungszeiten</dt>
+		<dd itemprop='openingHours'><%openingHours%></dd>
+		<dt>Telefon</dt>
+		<dd itemprop='telephone'><%telephone%></dd>
+		<dt>Fax</dt>
+		<dd itemprop='faxNumber'><%faxNumber%></dd>
+		<dt>E - Mail</dt>
+		<dd itemprop='email'><%email%></dd>
+		<dt>Web</dt>
+		<dd itemprop='url'><a href='<%url%>'><%url%></a></dd>
+		<dt>Adresse</dt>
+		<dd>
+			<address itemprop='address' itemscope itemtype='http://schema.org/PostalAddress'>
+				<%address.streetAddress%><br/>
+				<%address.addressCountry%> - <%address.postalCode%> <%address.addressLocality%>
+			</address>
+		</dd>
+	</dl>
+        <button onclick="showMap();">Zeige Karte</button>
+        <div id="example_map_1" style="width: 75%;height: 20em;">
+                ... unobtrusive code ...
+        </div>
+
+        <script>
+            function showMap() {
+                var options_1 = {
+                    centerLng: <%geo.longitude%>,
+                    centerLat: <%geo.latitude%>
+                };
+                var map_1 = new MobileAge.Component.Map("example_map_1", options_1);
+
+                var options = {
+                    icon: {
+                      url: '../assets/images/amenity/toilets.png',
+                      width: 64,
+                      height: 51
+                    },
+
+                    data: '[<%geo.longitude%>,<%geo.latitude%>]'
+                };
+
+
+                new MobileAge.Layer.Marker(map_1, options);
+            }
+        </script>
+
+</article>
+    '''
+  onData: ""
+  onTemplate: ""
+}

@@ -1,0 +1,24 @@
+{
+  template:
+    '''
+<article class='ma-schema--pharmacy' itemscope itemtype='http://schema.org/Pharmacy'> 
+	<h1 itemprop='name'><%name%></h1>
+	<p itemprop='description'><%description%></p>
+	<dl>
+		<dt>Öffnungszeiten</dt>
+		<dd itemprop='openingHours'><%openingHours%></dd>
+		<dt>Telefon</dt>
+		<dd itemprop='telephone'><%telephone%></dd>
+		<dt>Adresse</dt>
+		<dd>
+			<address itemprop='address' itemscope itemtype='http://schema.org/PostalAddress'>
+				<%address.streetAddress%><br/>
+				<%address.addressCountry%> - <%address.postalCode%> <%address.addressLocality%>
+			</address>
+		</dd>
+	</dl>
+</article>
+    '''
+  onData: ""
+  onTemplate: ""
+}
