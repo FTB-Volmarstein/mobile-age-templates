@@ -1,0 +1,19 @@
+{
+  "name": "mobile-age-templates",
+  "author": "FTB <mobile-age@ftb-esv.de>",
+  "license": "MIT",
+  "description": "MobileAge-Templates",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/FTB-Volmarstein/mobile-age-templates"
+  },
+  "engines": {
+    "node": ">= 0.8.4"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-hjson": "^2.4.3"
+  },
+  "version": "0.0.1"
+}
