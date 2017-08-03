@@ -7,7 +7,7 @@ and open the template in the editor.
 <html>
     <head>
         <title>TODO supply a title</title>
-        <meta charset="UTF-8">
+        <meta http-equiv="content-type" content="application/json; charset=utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/js-beautify/1.6.14/beautify.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/js-beautify/1.6.14/beautify-css.min.js"></script>
@@ -20,7 +20,7 @@ and open the template in the editor.
              * To change this template file, choose Tools | Templates
              * and open the template in the editor.
              */
-            (function() {
+            (function () {
 
                 var json = {
                     "template": "",
@@ -59,10 +59,13 @@ and open the template in the editor.
 
                 json.onData = "";
                 json.onTemplate = "";
-                json.template = html_beautify(json.template);
-                
-                echo(json);
-
+//                json.template = html_beautify(json.template);
+                json.template = json.template.replace(/&/g, '&amp;')
+                        .replace(/"/g, '&quot;')
+                        .replace(/'/g, '&#39;')
+                        .replace(/</g, '&lt;')
+                        .replace(/>/g, '&gt;');
+                document.write(JSON.stringify(json));
             })();
         </script>
     </body>
