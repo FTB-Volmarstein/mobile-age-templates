@@ -26,34 +26,6 @@
 			</address>
 		</dd>
 	</dl>
-        <button onclick="showMap();">Zeige Karte</button>
-        <div id="example_map_1" style="width: 75%;height: 20em;">
-                ... unobtrusive code ...
-        </div>
-
-        <script>
-            function showMap() {
-                var options_1 = {
-                    centerLng: <%geo.longitude%>,
-                    centerLat: <%geo.latitude%>
-                };
-                var map_1 = new MobileAge.Component.Map("example_map_1", options_1);
-
-                var options = {
-                    icon: {
-                      url: '../assets/images/amenity/toilets.png',
-                      width: 64,
-                      height: 51
-                    },
-
-                    data: '[<%geo.longitude%>,<%geo.latitude%>]'
-                };
-
-
-                new MobileAge.Layer.Marker(map_1, options);
-            }
-        </script>
-
 </article>
     '''
   onData: ""
