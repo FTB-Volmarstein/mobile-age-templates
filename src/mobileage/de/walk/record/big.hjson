@@ -7,8 +7,8 @@
         <div class='ma-details__card'>
             <div class='row'>
                 <div class='col-xs-12'>
-                <p><img itemprop="photo" src="<%teaserimage_url%>" alt="<%teaserimage_alt%>" /> <span itemprop="description"><%teasertext%></span></p>
-                </div>"
+                <p><%teaser_img%> <span itemprop="description"><%teasertext%></span></p>
+                </div>
             </div>
             <div class="address" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
                 <div class='ma-details__adress'><strong>Adresse:</strong>
@@ -48,6 +48,6 @@
     </div>
 </article>
     '''
-  onData: ""
+  onDataRecord: ""
   onTemplate: ""
 }
