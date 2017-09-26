@@ -10,3 +10,24 @@ Installation as usual:
 `npm install`
 
 Edit files in src-folder and run grunt's default task. This will write a corresponding JSON-file to the root directory.
+
+
+AudioObject
+ImageObject
+VideoObject
+
+  Event
+
+  docs/meddocs.html
+
+  Organization
+
+  Person
+
+  Place
+
+  Product
+
+  Review
+
+  Action

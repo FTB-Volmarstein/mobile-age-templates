@@ -1,0 +1,20 @@
+{
+  template:
+    '''
+<article class='ma-schema--thing' itemscope itemtype='http://schema.org/Thing'> 
+	<h1 itemprop='name'><%name%></h1>
+	<div class='ma-schema__image'>
+		<img itemprop='image' alt='Bild: <%name%>' src='<%image%>'/>
+	</div>
+	<p itemprop='description'><%description%></p>
+	<dl>
+		<dt>ID</dt>
+		<dd itemprop='identifier'><%identifier%></dd>
+		<dt>URL</dt>
+		<dd itemprop='url'><%url%></dd>
+	</dl>
+</article>
+    '''
+  onData: ""
+  onTemplate: ""
+}

@@ -1,0 +1,66 @@
+{
+  template:
+    '''    
+    <article class='ma-schema--person' itemscope itemtype='http://schema.org/Person'>
+      <img src="http://upload.wikimedia.org/wikipedia/commons/3/33/Usain_Bolt_2012_Olympics_1.jpg" 
+           itemprop="image" style="width:300px; height:400px" alt="Bolt at the 2012 Summer Olympics" />  
+      <div>
+        <strong>Full Name:</strong>
+        <span itemprop="givenName">Usain</span>
+        <span itemprop="middleName">St. Leo</span>
+        <span itemprop="familyName">Bolt</span>
+        <meta itemprop="gender" content="Male" />
+      </div>
+      <div itemprop="nationality" itemscope itemtype="http://schema.org/Country">
+        <strong>Nationality:</strong>
+        <span itemprop="name">Jamaica</span>
+      </div>
+      <strong>Born:</strong>
+      <meta itemprop="birthDate" content="1986-08-21" />
+      21 August 1986 (age 26)
+      <div itemprop="homeLocation" itemscope itemtype="http://schema.org/PostalAddress">
+        <strong>Residence:</strong>
+        <span itemprop="addressLocality">Kingstong</span>,
+        <span itemprop="addressCountry" itemscope itemtype="http://schema.org/Country">
+          <span itemprop="name">Jamaica</span>
+        </span>
+      </div>
+      <div itemprop="performerIn" itemscope itemtype="http://schema.org/SportsEvent">
+        <strong>Performing in:</strong>
+        <span itemprop="name">Sprints</span>
+      </div>
+      <div>
+        <strong>Awards:</strong>
+        <span itemprop="award">Order of Jamaica</span>, 
+        <span itemprop="award">Order of Distinction</span>,
+        <span itemprop="award">IAAF World Athlete of the Year</span>,
+        <span itemprop="award">Track &amp; Field Athlete of the Year</span>,
+        <span itemprop="award">Laureus Sportsman of the Year</span>(twice).
+      </div>
+      <div>
+        <strong>Parents:</strong>
+          <span itemprop="parent" itemscope itemtype="http://schema.org/Person">
+            <span itemprop="givenName">Jennifer</span>
+            <span itemprop="familyName">Bolt</span>
+          </span>,
+          <span itemprop="parent" itemscope itemtype="http://schema.org/Person">
+            <span itemprop="givenName">Wellesley</span>
+            <span itemprop="familyName">Bolt</span>
+          </span>
+      </div>
+      <div itemprop="description">
+        Usain Bolt is a Jamaican sprinter widely regarded as the fastest person ever. 
+        He is the first man to hold both the 100 metres and 200 metres world records since 
+        fully automatic time measurements became mandatory in 1977. Along with his teammates, 
+        he also set the world record in the 4x100 metres relay. He is the reigning Olympic champion 
+        in these three events, the first man to win six Olympic gold medals in sprinting, 
+        and a five-time World champion. He was the first to achieve a "double double" by winning 
+        100m and 200m titles at consecutive Olympics (2008 and 2012), and topped this through 
+        the first "double triple" (including 4x100m relays).
+      </div>
+    </div>
+</article>
+    '''
+  onData: ""
+  onTemplate: ""
+}

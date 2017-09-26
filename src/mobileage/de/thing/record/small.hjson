@@ -1,0 +1,11 @@
+{
+  template:
+    '''
+<article class='ma-schema--thing' itemscope itemtype='http://schema.org/Thing'> 
+	<h1 itemprop='name'><%name%></h1>
+	<p itemprop='description'><%description%></p>
+</article>
+    '''
+  onData: ""
+  onTemplate: ""
+}
