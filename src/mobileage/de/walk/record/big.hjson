@@ -1,7 +1,7 @@
 {
   template:
     '''    
-    <article class='ma-details__card'>
+    <article class='ma-schema--walk'>
     <div>
         <h2><span itemprop="title"><%title%></h2>
         <div class='ma-details__card'>
@@ -16,8 +16,8 @@
                     <span itemprop="addressLocality"><%place%></span>
                 </div>
             </div>
-            <span itemprop="totalTime"><%duration%></span>
-            <span itemprop="Distance"><%distance%></span>
+            <p><strong>Dauer:</strong> <span itemprop="totalTime"><%duration%></span></p>
+            <p><strong>Distanz:</strong> <span itemprop="Distance"><%distance%></span></p>
             <span itemprop="Description"><%description%></span>
             <div class='ma-details__options'>
                 <div class='row'>
@@ -42,7 +42,7 @@
             </div>
 
             <div class="" itemprop="accessibilitySummary" itemscope itemtype="http://schema.org/accessibilitySummary">
-                <%accessibility%>
+                <p><strong>Barrierefreiheit:</strong><%accessibility%></p>
             </div>
         </div>
     </div>
