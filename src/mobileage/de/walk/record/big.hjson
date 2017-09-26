@@ -1,7 +1,7 @@
 {
   template:
     '''    
-    <article class='ma-details__card'>
+    <article class='ma-schema--walk'>
     <div>
         <h2><span itemprop="title"><%title%></h2>
         <div class='ma-details__card'>
