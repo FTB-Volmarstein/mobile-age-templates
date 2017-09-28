@@ -1,0 +1,53 @@
+{
+  template:
+    '''    
+    <article class='ma-schema--walk'>
+        <div>
+            <h2><span itemprop="title"><%title%></h2>
+            <div class='ma-details__card'>
+                <div class='row'>
+                    <div class='col-xs-12'>
+                    <p><%teaser_img%> <span itemprop="description"><%teasertext%></span></p>
+                    </div>
+                </div>
+                <div class="address" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+                    <div class='ma-details__adress'><strong>Adresse:</strong>
+                        <span itemprop="streetAddress"><%address%></span>
+                        <span itemprop="addressLocality"><%place%></span>
+                    </div>
+                </div>
+                <p><strong>Dauer:</strong> <span itemprop="totalTime"><%duration%></span></p>
+                <p><strong>Distanz:</strong> <span itemprop="Distance"><%distance%></span></p>
+                <span itemprop="Description"><%description%></span>
+                <div class='ma-details__options'>
+                    <div class='row'>
+                        <div class='col-xs-12 col-sm-6'>
+                            <div class="" itemprop="accomodation" itemscope itemtype="http://schema.org/Accomodation">
+                                <span itemprop="name">Toiletten</span>
+                                <span itemprop="description"><%toilets%></span>
+                            </div>
+                            <div class="" itemprop="accomodation" itemscope itemtype="http://schema.org/Accomodation">
+                                <span itemprop="name">Sitzgelegenheiten</span>
+                                <span itemprop="description"><%seatings%></span>
+                            </div>
+                            <div class="" itemprop="accomodation" itemscope itemtype="http://schema.org/Accomodation">
+                                <span itemprop="name">Erfrischungen</span>
+                                <span itemprop="description"><%refreshments%></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="" itemprop="comment" itemscope itemtype="http://schema.org/Comment">
+                    <%comment%>
+                </div>
+
+                <div class="" itemprop="accessibilitySummary" itemscope itemtype="http://schema.org/accessibilitySummary">
+                    <p><strong>Barrierefreiheit:</strong><%accessibility%></p>
+                </div>
+            </div>
+        </div>
+    </article>
+    '''
+  onDataRecord: ""
+  onTemplate: ""
+}

@@ -1,0 +1,21 @@
+{
+  template:
+    '''    
+  <div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+    <span itemprop="streetAddress"><%streetAddress%></span>
+    <span itemprop="postalCode"><%postalCode%></span>
+    <span itemprop="addressLocality"><%addressLocality%></span>,
+    <span itemprop="addressRegion"><%addressRegion%></span>
+  </div>
+    '''
+  onData: 
+    '''
+function(item) {
+            for(key in item) {
+                item[key] = item[key] == void 0 ? "" : item[key];
+            }
+            return
+        }
+    '''
+  onTemplate: ""
+}

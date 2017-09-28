@@ -18,13 +18,15 @@
       <strong>Born:</strong>
       <meta itemprop="birthDate" content="1986-08-21" />
       21 August 1986 (age 26)
-      <div itemprop="homeLocation" itemscope itemtype="http://schema.org/PostalAddress">
+<%homeloc%>      
+<div itemprop="homeLocation" itemscope itemtype="http://schema.org/PostalAddress">
         <strong>Residence:</strong>
         <span itemprop="addressLocality">Kingstong</span>,
         <span itemprop="addressCountry" itemscope itemtype="http://schema.org/Country">
           <span itemprop="name">Jamaica</span>
         </span>
       </div>
+
       <div itemprop="performerIn" itemscope itemtype="http://schema.org/SportsEvent">
         <strong>Performing in:</strong>
         <span itemprop="name">Sprints</span>
