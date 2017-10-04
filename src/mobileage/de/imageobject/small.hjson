@@ -1,0 +1,17 @@
+{
+  template:
+    '''    
+    <%img%>
+    '''
+  onData: 
+    '''
+function (item) {
+                    if (item['image'] === null || item['image'] === "") {
+                        item['img'] = '';
+                    } else {
+                        item['img'] = "<img itemprop='image' src='" + item['image.contentUrl'] + "' alt='" + item['image.description'] + "'/>";
+                    }
+                }
+    '''
+  onTemplate: ""
+}

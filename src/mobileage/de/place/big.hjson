@@ -2,15 +2,20 @@
   template:
     '''    
   <div itemprop="location" itemscope itemtype="http://schema.org/Place">
-    <a itemprop="url" href="wells-fargo-center.html">
-    Wells Fargo Center
-    </a>
+      <a itemprop="url" href="<%url%>">
+        <%name%>
+      </a>
+
     <div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
-      <span itemprop="addressLocality">Philadelphia</span>,
-      <span itemprop="addressRegion">PA</span>
+      <span itemprop="streetAddress"><%streetAddress%></span>
+      <span itemprop="postOfficeBoxNumber"><%postOfficeBoxNumber%></span>
+      <span itemprop="postalCode"><%postalCode%></span>
+      <span itemprop="addressLocality"><%addressLocality%></span>,
+      <span itemprop="addressRegion"><%addressRegion%></span>,
+      <span itemprop="addressCountry"><%addressCountry%></span>
     </div>
   </div>
     '''
-  onDataRecord: ""
+  onData: ""
   onTemplate: ""
 }

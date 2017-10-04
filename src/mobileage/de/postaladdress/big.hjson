@@ -3,9 +3,11 @@
     '''    
   <div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
     <span itemprop="streetAddress"><%streetAddress%></span>
+    <span itemprop="postOfficeBoxNumber"><%postOfficeBoxNumber%></span>
     <span itemprop="postalCode"><%postalCode%></span>
     <span itemprop="addressLocality"><%addressLocality%></span>,
-    <span itemprop="addressRegion"><%addressRegion%></span>
+    <span itemprop="addressRegion"><%addressRegion%></span>,
+    <span itemprop="addressCountry"><%addressCountry%></span>
   </div>
     '''
   onData: 

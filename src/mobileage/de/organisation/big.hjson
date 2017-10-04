@@ -1,0 +1,75 @@
+{
+  template:
+    '''  
+  <div itemscope itemtype="http://schema.org/Organization">
+    <%logo%><span itemprop="name"><%name%></span>
+    
+    <p>
+        Beschreibung: <span itemprop="description"><%description%></span>
+    </p>
+    <div><%img%></div>
+    Kontakt:
+    <div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+      Addresse:
+      <span itemprop="streetAddress"><%streetAddress%></span>
+      <span itemprop="postOfficeBoxNumber"><%postOfficeBoxNumber%></span>
+      <span itemprop="postalCode"><%postalCode%></span>
+      <span itemprop="addressLocality"><%addressLocality%></span>,
+      <span itemprop="addressRegion"><%addressRegion%></span>,
+      <span itemprop="addressCountry"><%addressCountry%></span>
+    </div>
+    
+    <div itemprop="contactPoint" itemscope itemtype="http://schema.org/ContactPoint">
+        Kontakt:
+        Tel: <span itemprop="telephone"><%telephone%></span>,
+        Fax: <span itemprop="faxNumber"><%faxNumber%></span>,
+        E-Mail: <span itemprop="email"><%email%></span>
+        Web: <span itemprop="url"><%url%></span>
+    </div>
+    
+    <div itemprop="parentOrganization" itemscope itemtype="http://schema.org/Organization">
+        <span itemprop="name"><%parentOrganization.name%></span>
+
+        <p>
+            Beschreibung: <span itemprop="description"><%parentOrganization.description%></span>
+        </p>
+        
+        
+        Kontakt:
+        <div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+          Addresse:
+          <span itemprop="streetAddress"><%parentOrganization.streetAddress%></span>
+          <span itemprop="postOfficeBoxNumber"><%parentOrganization.postOfficeBoxNumber%></span>
+          <span itemprop="postalCode"><%parentOrganization.postalCode%></span>
+          <span itemprop="addressLocality"><%parentOrganization.addressLocality%></span>,
+          <span itemprop="addressRegion"><%parentOrganization.addressRegion%></span>,
+          <span itemprop="addressCountry"><%parentOrganization.addressCountry%></span>
+        </div>
+
+        <div itemprop="contactPoint" itemscope itemtype="http://schema.org/ContactPoint">
+            Tel: <span itemprop="telephone"><%parentOrganization.telephone%></span>,
+            Fax: <span itemprop="faxNumber"><%parentOrganization.faxNumber%></span>,
+            E-Mail: <span itemprop="email"><%parentOrganization.email%></span>
+            Web: <span itemprop="url"><%parentOrganization.url%></span>
+        </div>
+    </div>
+    
+    '''
+  onData: 
+    '''
+function (item) {
+                    if (item['logo'] === null || item['logo'] === "") {
+                        item['logo'] = '';
+                    } else {
+                        item['logo'] = "<img itemprop='logo' src='" + item['logo.contentUrl'] + "' alt='" + item['logo.description'] + "'/>";
+                    }
+                    
+                    if (item['img'] === null || item['img'] === "") {
+                        item['img'] = '';
+                    } else {
+                        item['img'] = "<img itemprop='image' src='" + item['image.contentUrl'] + "' alt='" + item['image.description'] + "'/>";
+                    }
+                }
+    '''
+  onTemplate: ""
+}
