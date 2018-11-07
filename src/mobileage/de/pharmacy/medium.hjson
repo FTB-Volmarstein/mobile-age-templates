@@ -14,7 +14,7 @@
 		<dd itemprop='telephone'><%telephone%></dd>
 		<dt>Fax</dt>
 		<dd itemprop='faxNumber'><%faxNumber%></dd>
-		<dt>E - Mail</dt>
+		<dt>E-Mail</dt>
 		<dd itemprop='email'><%email%></dd>
 		<dt>Web</dt>
 		<dd itemprop='url'><a href='<%url%>'><%url%></a></dd>
